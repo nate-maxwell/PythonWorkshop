@@ -49,7 +49,7 @@ These comparisons return **Booleans** - values that are either `True` or `False`
 Booleans are also a type, like string, integer, and float.
 ```python
 happy = True
-print(happy)
+print(happy)  # output: True
 ```
 
 ### The input() Function
