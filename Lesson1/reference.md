@@ -62,7 +62,8 @@ print(name)
 ### Type Conversion
 Since `input()` always returns a string, you need to convert it to use it as a number:
 ```python
-age = int(input("What's your age? "))
+answer = input("What's your age? ")  # saved as string
+age = int(answer)  # converted to integer
 next_year = age + 1
 ```
 
