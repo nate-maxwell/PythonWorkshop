@@ -18,7 +18,7 @@ second = 'world'
 print(first, second)  # output: hello world
 ```
 
-**Integers** are whole numbers. You can perform math operations like addition (`+`),
+**Integers** are whole numbers. They can perform math operations like addition (`+`),
 subtraction (`-`), multiplication (`*`), and division (`/`):
 ```python
 age = 25
