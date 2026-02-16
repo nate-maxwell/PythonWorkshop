@@ -1,4 +1,4 @@
-# Lesson 1 - Variables and Operators
+# Lesson 1 - Variables ,Operators, If Statements, and While Loops
 
 ## The `print()` Function
 The `print()` function displays text or values to the screen. It's a simple way
