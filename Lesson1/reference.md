@@ -89,7 +89,7 @@ else:
 The `and` keyword means both conditions must be true.
 
 ### `while` Loops
-A while loop repeats code as long as a condition is `True`:
+A `while` loop repeats code as long as a condition is `True`:
 ```python
 count = 0
 while count < 5:
