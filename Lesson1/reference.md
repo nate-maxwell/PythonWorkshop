@@ -6,6 +6,8 @@ to let your program communicates with the user.
 ```python
 print("hello world")  # Output: hello world
 ```
+Functions will be expanded upon in a future lesson, but for now we can use this
+to inspect our program.
 
 ## Variables
 
