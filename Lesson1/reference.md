@@ -69,7 +69,7 @@ next_year = age + 1
 
 ## Control Flow
 
-`If`, `Elif`, and `Else` Statements
+`if`, `elif`, and `else` Statements
 
 Control flow lets your program make decisions. The `if` statement runs code only
 when a condition is `True`. Use `elif` (else-if) for additional conditions, and `else`
