@@ -26,8 +26,8 @@ next_year = age + 1
 print(next_year)  # Output: 26
 ```
 
-**Floats** are decimal numbers. Like integers, can support multiplication (`*`) and
-division (`/`), but are more precise:
+**Floats** are decimal numbers. Like integers, they can support multiplication (`*`)
+and division (`/`), but are more precise:
 ```python
 price = 19.99
 total = price * 2
