@@ -3,8 +3,7 @@ import random
 answer = random.randint(1, 100)
 guess = 0
 
-print("I'm thinking of a number between 1 and 100.")
-print("Can you guess what it?")
+print("I'm thinking of a number between 1 and 100. Can you guess what it?")
 
 while guess != answer:
     guess = input("New guess: ")
