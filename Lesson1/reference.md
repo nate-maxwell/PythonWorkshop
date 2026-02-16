@@ -104,7 +104,7 @@ while True:
     age = input("What's your age? (type 'quit' to exit) ")
     if age == "quit":
         break
-    print(f"You entered: {age}")
+    print("You entered: ", age)
 ```
 
 # Assignment: Number Guessing Game
