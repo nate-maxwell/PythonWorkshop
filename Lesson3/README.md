@@ -95,6 +95,9 @@ guess = game_utils.get_guess()
 result = game_utils.check_guess(guess, secret)
 print(result)
 ```
+Files that exist in the same folder can be imported as-is. Files located in
+another directory require that the folder be added to the `PYTHONPATH` environment
+variable. We will expand more on this later.
 
 ## Classes
 
@@ -271,8 +274,7 @@ that finds contacts whose name contains the search query:
 def search_contacts(self, query: str) -> list[Contact]:
     ...
 ```
-It is up to you on which way the system filters through contacts. There are
-numerous ways to achieve this and its up to you to decide how.
+There are numerous ways to achieve this and its up to you to decide how.
 
 Hint: One way involves something we've already covered in a previous lesson.
 
