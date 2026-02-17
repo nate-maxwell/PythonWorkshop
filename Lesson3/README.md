@@ -268,8 +268,8 @@ my_contacts.delete_contact("Bob")
 
 # Assignment
 Today's assignment will require a bit of research from attendees.
-Add a search method to our `ContactBook` class with the following signature
-that finds contacts whose name contains the search query:
+Add a search method to our `ContactBook` class that finds contacts whose name
+contains the search query:
 ```python
 def search_contacts(self, query: str) -> list[Contact]:
     ...
@@ -279,7 +279,7 @@ There are numerous ways to achieve this and its up to you to decide how.
 Hint: One way involves something we've already covered in a previous lesson.
 
 ## Challenge
-Add an `is_favorite` variable to `Contact` (starts as False).
+Add an `is_favorite` variable to `Contact` (starts as `False`).
 
 Then create `mark_as_favorite(name)` and `unmark_as_favorite(name)` methods in
 the ContactBook.
