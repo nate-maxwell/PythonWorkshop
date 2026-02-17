@@ -1,4 +1,4 @@
-# Lesson 2 - Modules and Classes
+# Lesson 3 - Modules and Classes
 
 ## Modules
 
