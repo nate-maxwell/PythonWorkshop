@@ -87,6 +87,8 @@ else:
     print("You're from another generation!")
 ```
 The `and` keyword means both conditions must be true.
+Text under the `if`, `elif`, or `else` line must be indented to be executed if
+the corresponding condition is met.
 
 ### `while` Loops
 A `while` loop repeats code as long as a condition is `True`:

@@ -117,6 +117,8 @@ def greet():
 
 greet()  # Output: Hello!
 ```
+Text underneath the `def` line are a part of the function, as long as they are
+indented below, like `if` statements and loops.
 
 ### Function Parameters
 Parameters let you pass data into a function:
