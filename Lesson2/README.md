@@ -255,7 +255,7 @@ Menu options:
 * View all contacts (display in a readable format)
 * Search for contact by name
 * Delete contact by name
-Quit
+* Quit
 
 
 Use functions for each operation!
