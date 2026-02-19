@@ -238,11 +238,32 @@ play_game()
 
 # Assignment
 
-### Track All Guesses
-Store every guess the player makes, then display them at the end!
+### Contact List
+Build a contact manager using a 2D list (list of lists):
+Each contact is stored as a list: `["Name", "Phone", "Email"]`
+
+All contacts stored in one big list:
+```python
+contacts = [
+    ["Alice", "555-1234", "alice@email.com"],
+    ["Bob", "555-5678", "bob@email.com"]
+]
+```
+
+Menu options:
+* Add new contact (ask for name, phone, email)
+* View all contacts (display in a readable format)
+* Search for contact by name
+* Delete contact by name
+Quit
+
+
+Use functions for each operation!
 
 ## Challenge
-Can you modify your program to ask the user which difficulty they want to play?
-
-Try asking for `easy`, `normal`, or `expert`.
-Then give the player a different number of attempts based on the chosen difficulty.
+- Add an "update contact" feature:
+  - Search for contact by name
+  - Ask which field to update (phone or email)
+  - Update that specific field
+- Add validation: phone numbers should not be empty, emails should contain "@"
+- Add a "count contacts" feature that shows total number of contacts
