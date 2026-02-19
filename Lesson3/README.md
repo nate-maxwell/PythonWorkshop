@@ -189,20 +189,25 @@ saving the data to files to repopulate the classes at a later time.
 
 ### Part 1: Create a Contact Class
 ```python
+def print_line_separator() -> None:
+    print("-" * 80)
+
+
 class Contact(object):
-    def __init__(self, name: str, phone: str, email: str) -> None:
+    def __init__(self, name: str, phone: str, email: str, group: str) -> None:
         self.name = name
         self.phone = phone
         self.email = email
-    
+        self.group = group
+
     def update_phone(self, new_phone: str) -> None:
         self.phone = new_phone
-    
+
     def update_email(self, new_email: str) -> None:
         self.email = new_email
-    
+
     def display(self) -> None:
-        print()
+        print_line_separator()
         print(f"Name: {self.name}")
         print(f"Phone: {self.phone}")
         print(f"Email: {self.email}")
@@ -213,17 +218,18 @@ class Contact(object):
 class ContactBook(object):
     def __init__(self) -> None:
         self.contacts: list[Contact] = []
-    
+
     def add_contact(self, contact: Contact) -> None:
         self.contacts.append(contact)
         print(f"Added {contact.name} to contacts")
-    
+
     def find_contact(self, name: str) -> Contact | None:
         for contact in self.contacts:
             if contact.name.lower() == name.lower():
                 return contact
+
         return None
-    
+
     def list_all_contacts(self) -> None:
         if len(self.contacts) == 0:
             print("No contacts found")
@@ -231,7 +237,19 @@ class ContactBook(object):
             print(f"\n=== Contact Book ({len(self.contacts)} contacts) ===")
             for contact in self.contacts:
                 contact.display()
-    
+
+            print_line_separator()
+            print()
+
+    def search_contacts(self, query: str) -> list[Contact]:
+        found = []
+
+        for i in self.contacts:
+            if query in i.name:
+                found.append(i)
+
+        return found
+
     def delete_contact(self, name: str) -> None:
         contact = self.find_contact(name)
         if contact:
@@ -242,46 +260,42 @@ class ContactBook(object):
 ```
 
 # Using the Classes Together
+
 ```python
 # Create a contact book
-my_contacts = ContactBook()
+contact_book = ContactBook()
 
 # Add some contacts
-alice = Contact("Alice", "555-1234", "alice@email.com")
-bob = Contact("Bob", "555-5678", "bob@email.com")
+alice = Contact("Alice", "555-1234", "alice@email.com", "Friends")
+bob = Contact("Bob", "555-5678", "bob@email.com", "Family")
 
-my_contacts.add_contact(alice)
-my_contacts.add_contact(bob)
+contact_book.add_contact(alice)
+contact_book.add_contact(bob)
 
 # List all contacts
-my_contacts.list_all_contacts()
+contact_book.list_all_contacts()
 
 # Find and update a contact
-contact = my_contacts.find_contact("Alice")
+contact = contact_book.find_contact("Alice")
 if contact:
     contact.update_phone("555-9999")
     contact.display()
 
 # Delete a contact
-my_contacts.delete_contact("Bob")
+contact_book.delete_contact("Bob")
 ```
 
 # Assignment
-Today's assignment will require a bit of research from attendees.
-Add a search method to our `ContactBook` class that finds contacts whose name
-contains the search query:
-```python
-def search_contacts(self, query: str) -> list[Contact]:
-    ...
-```
-There are numerous ways to achieve this and its up to you to decide how.
-
-Hint: One way involves something we've already covered in a previous lesson.
+Extend the contact book with a grouping system:
+* Add a group parameter to the Contact class (e.g., "Family", "Work", "Friends")
+* Create a `list_by_group(group)` method in ContactBook that displays all
+contacts in a specific group
+* Create a `get_all_groups()` method that returns a list of unique group names
+(no duplicates)
+* Add a menu option to view contacts by group
 
 ## Challenge
-Add an `is_favorite` variable to `Contact` (starts as `False`).
-
-Then create `mark_as_favorite(name)` and `unmark_as_favorite(name)` methods in
-the ContactBook.
-
-Finally create a `list_favorites()` method that only shows favorite contacts.
+* Create a `move_contact_to_group(name, new_group)` method
+* Create a `count_contacts_by_group()` method that returns how many contacts are
+in each group
+* Display group statistics when listing all contacts
