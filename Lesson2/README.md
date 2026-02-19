@@ -263,7 +263,7 @@ Use functions for each operation!
 ## Challenge
 - Add an "update contact" feature:
   - Search for contact by name
-  - Ask which field to update (phone or email)
+  - Ask which field to update (name, phone or email)
   - Update that specific field
 - Add validation: phone numbers should not be empty, emails should contain "@"
 - Add a "count contacts" feature that shows total number of contacts
