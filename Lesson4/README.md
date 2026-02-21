@@ -270,4 +270,4 @@ print("nmaxwell@agbo.com".split("@"))
 * Add email domain analysis to statistics:
     * Count how many contacts use each email domain (@gmail.com, @yahoo.com, etc.)
     * Add this to the statistics dictionary as `"email_domains": {"gmail.com": 5, "yahoo.com": 3}`
-* Save and load these enhanced statistics
+* Save these enhanced statistics out to our statistics JSON file.
