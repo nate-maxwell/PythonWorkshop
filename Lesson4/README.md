@@ -77,12 +77,12 @@ file_path = Path("C:/Users/nated/OneDrive/Desktop/tutorial/person.json")
 
 From here we gain a handful of useful methods we can call on our path object:
 ```python
-print(file_path.parent)
-print(file_path.name)
-print(file_path.stem)
-print(file_path.suffix)
-print(Path.home())
-print(Path.home().exists())
+print(file_path.parent)      # Output: C:/Users/nated/OneDrive/Desktop/tutorial
+print(file_path.name)        # Output: person.json
+print(file_path.stem)        # Output: person
+print(file_path.suffix)      # Output: .json
+print(Path.home())           # C:\Users\<username>
+print(Path.home().exists())  # True
 ```
 
 ## JSON
