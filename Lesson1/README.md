@@ -75,13 +75,13 @@ Control flow lets your program make decisions. The `if` statement runs code only
 when a condition is `True`. Use `elif` (else-if) for additional conditions, and `else`
 as a fallback:
 ```python
-age = int(input("What's your age? "))
+birth_year = int(input("What year were you born? "))
 
-if age >= 1997 and age <= 2012:
+if birth_year >= 1997 and birth_year <= 2012:
     print("You're Gen Z!")
-elif age >= 1981 and age <= 1996:
+elif birth_year >= 1981 and birth_year <= 1996:
     print("You're a Millennial!")
-elif age >= 1965 and age <= 1980:
+elif birth_year >= 1965 and birth_year <= 1980:
     print("You're Gen X!")
 else:
     print("You're from another generation!")
