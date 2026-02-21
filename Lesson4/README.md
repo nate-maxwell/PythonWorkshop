@@ -246,7 +246,7 @@ contact_book.save_to_file(save_path)
 # Assignment
 
 * Add a `get_statistics()` method to ContactBook that returns a dictionary:
-```python
+```json
 {
     "total_contacts": 10,
     "contacts_by_group": {"Family": 3, "Work": 5, "Friends": 2},
