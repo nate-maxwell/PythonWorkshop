@@ -1,4 +1,4 @@
-# Lesson 1 - Variables ,Operators, If Statements, and While Loops
+# Lesson 1 - Variables, Operators, If Statements, and While Loops
 
 ## The `print()` Function
 The `print()` function displays text or values to the screen. It's a simple way
@@ -75,6 +75,18 @@ Control flow lets your program make decisions. The `if` statement runs code only
 when a condition is `True`. Use `elif` (else-if) for additional conditions, and `else`
 as a fallback:
 ```python
+birth_year = int(input("What year were you born"))
+
+if birth_year > 2006:
+    print("You are not old enough to drink...")
+elif birth_year <= 2004:
+    print("You are old enough to drink...")
+else:
+    print("You might be old enough to drink...")
+```
+
+The `and` keyword means both conditions must be true.
+```python
 birth_year = int(input("What year were you born? "))
 
 if birth_year >= 1997 and birth_year <= 2012:
@@ -86,9 +98,6 @@ elif birth_year >= 1965 and birth_year <= 1980:
 else:
     print("You're from another generation!")
 ```
-The `and` keyword means both conditions must be true.
-Text under the `if`, `elif`, or `else` line must be indented to be executed if
-the corresponding condition is met.
 
 ### `while` Loops
 A `while` loop repeats code as long as a condition is `True`:
@@ -119,7 +128,7 @@ import random
 secret_number = random.randint(1, 100)  # Random number between 1 and 100
 ```
 
-## Your Task
+# Assignment
 Write a program that:
 
 1. Generates a random number between 1 and 100
