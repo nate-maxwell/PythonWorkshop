@@ -3,6 +3,11 @@
 Before we begin our workshop, lets make sure you have python and VSCode
 installed on your local machine.
 
+## DISCLAIMER
+
+The steps taken to get setup here should be done on a personally owned computer,
+not a work computer.
+
 ## Installing Python
 
 You can download python itself [here](https://www.python.org/downloads/windows/).
