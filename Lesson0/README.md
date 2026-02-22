@@ -26,9 +26,9 @@ Run the downloaded installer and make sure to check `Add python.exe to PATH`.
 VS Code is an `Integrated Developer Environment` application, or IDE. In other
 words: a program specifically for writing software.
 
-<img src="https://i.imgur.com/m2YLblI.png">
-
 You can download VSCode [here](https://code.visualstudio.com/download).
+
+<img src="https://i.imgur.com/m2YLblI.png">
 
 ## Python Extension for VSCode
 
