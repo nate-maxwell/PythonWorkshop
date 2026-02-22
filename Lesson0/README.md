@@ -64,5 +64,5 @@ If you got this far then you are ready for the Python Workshop!
 The [VFX Reference Platform](https://vfxplatform.com/)
 defines a set of tool and library versions to establish a consistent build
 target for software providers in the VFX industry. Many studios reference it
-but to not follow it completely, but it is a good place to get a general sense
+but do not follow it completely, but it is a good place to get a general sense
 of where langauge and build-tool versions should be at across the industry.
