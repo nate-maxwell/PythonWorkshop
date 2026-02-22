@@ -25,6 +25,19 @@ words: a program specifically for writing software.
 
 You can download VSCode [here](https://code.visualstudio.com/download).
 
+## Python Extension for VSCode
+
+Next, lets enable the python extension for VS code. This will give us some
+visual feedback to our code, highlighting warnings and errors, in addition to
+other useful features.
+
+To install an extension in VSCode click on the extensions button on the left
+hand column (the one that looks like 4 squares). Next, search `python` in the
+search box and select the extension provided by Microsoft. Finally, click the
+`install` button in the main pane by the extension logo.
+
+<img src="https://i.imgur.com/Idlrw9F.png">
+
 ## Did we get it right?
 
 Make a folder somewhere on your computer. This will be the project folder we
