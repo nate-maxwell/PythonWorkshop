@@ -1,8 +1,20 @@
 # Lesson 1 - Variables, Operators, If Statements, and While Loops
 
+# Motivations
+
+The goal of this workshop is to teach python in the most primitive form. We will
+not spend long on each topic, meaning we will not expand on all possible features
+the language offers for each topic.
+
+The goal is to make developers able to write program that work, not write the
+best version of those programs. As developers grow and explore the language,
+they will inevitably learn better ways to write their programs over time.
+
+Independent research is always encouraged.
+
 ## The `print()` Function
 The `print()` function displays text or values to the screen. It's a simple way
-to let your program communicates with the user.
+to let your program communicates to the user.
 ```python
 print("hello world")  # Output: hello world
 ```
@@ -11,9 +23,12 @@ to inspect our program.
 
 ## Variables
 
+Variables are pieces of data that we have stored for later use. All variables
+have a type and the type defines what actions we can perform with it.
+
 **Strings** are text data enclosed in quotes (`"` or `'`, as long as both match):
 ```python
-first = "hello "
+first = "hello"
 second = 'world'
 print(first, second)  # output: hello world
 ```
@@ -80,8 +95,19 @@ name = input("What's your name? ")
 print(name)
 ```
 
+### The type() Function
+The `type()` function returns the type of a value.
+This can help us inspect or debug values as we work on them.
+
+```python
+greeting_type = type("hello world")
+print(greeting_type)  # Output: <class 'str'>
+```
+
 ### Type Conversion
-Since `input()` always returns a string, you need to convert it to use it as a number:
+The `input()` always returns a string. Therefore, if we need the input as some
+other type of data, we need to convert it. We can convert the string to an
+integer like so:
 ```python
 answer = input("What's your age? ")  # saved as string
 age = int(answer)  # converted to integer
@@ -98,7 +124,7 @@ as a fallback:
 ```python
 birth_year = int(input("What year were you born"))
 
-if birth_year > 2006:
+if birth_year >= 2006:
     print("You are not old enough to drink...")
 elif birth_year <= 2004:
     print("You are old enough to drink...")
@@ -133,10 +159,10 @@ while count < 5:
 The `break` keyword immediately exits a loop:
 ```python
 while True:
-    age = input("What's your age? (type 'quit' to exit) ")
-    if age == "quit":
+    answer = input("What's your age? (type 'quit' to exit) ")
+    if answer == "quit":
         break
-    print("You entered: ", age)
+    print("You entered:", answer)
 ```
 
 # Assignment: Number Guessing Game
