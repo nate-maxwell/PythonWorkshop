@@ -36,6 +36,27 @@ print(total)  # Output: 39.98
 
 ## Operators
 
+**Math operators** are the arithmetic operators:
+
+* `+`  Addition
+* `-`  Subtraction
+* `/`  Division
+* `//` Integer division
+* `*`  Multiplication
+* `**` Power
+
+I encourage you to experiment with operators and types as they can work in
+surprising ways.
+
+For example `print("50" + 8)` will raise an error because python cannot determine
+if you want the string `"508"` or the integer `400`.
+`print("50" * 8)` will work, however, as strings multiplied by a number will
+repeat that number of times, therefore this will output `"5050505050505050"`.
+
+All division will create a float, including dividing integers that would result
+in no remainder. `print(10 / 2)` will output `5.0` instead of `5`. Using the
+integer division operator will discard the remainder: `print(10 // 2)  # Output: 5`.
+
 **Comparison operators** let you compare values:
 
 * `<` less than
