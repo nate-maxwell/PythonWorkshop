@@ -96,3 +96,56 @@ print(result)
 Files that exist in the same folder can be imported as-is. Files located in
 another directory require that the folder be added to the `PYTHONPATH` environment
 variable. We will expand more on this later.
+
+# \_\_main__
+
+Consider the following code:
+
+```python
+# math_utils.py
+
+def example_pow(x: int, y: int) -> int:
+    return x ** y
+
+
+foo = example_pow(3, 4)
+```
+
+When importing a library, all top level code (code not bound to a function or
+class) will execute.
+
+This can be helpful when setting up values that are dependent on the platform
+executing the code, or other functionality a library is dependent on that cannot
+be determined beforehand.
+
+However, sometimes you want code to run while working on your library but you
+do not want the code to run when it is imported into another. A very common
+idiom to get around this is as follows:
+
+```python
+# math_utils.py
+
+def example_pow(x: int, y: int) -> int:
+    return x ** y
+
+
+if __name__ == '__main__':
+    foo = example_pow(3, 4)
+```
+
+Lets break this down.
+
+first, lets print
+```python
+print(__name__)
+```
+
+`__name__` will print the value of `"__main__"`.
+However, if we import our library into another, it will print the name of the
+file it was declared in.
+Give this a try, printing it in the file you execute vs printing it in a file
+you import to see the results.
+
+By checking if `__name__` evaluates to `"__main__"` we can limit code to only
+run if we are executing the exact file it is located in, and not importing it
+from another.
