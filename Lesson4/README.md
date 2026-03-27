@@ -149,3 +149,45 @@ you import to see the results.
 By checking if `__name__` evaluates to `"__main__"` we can limit code to only
 run if we are executing the exact file it is located in, and not importing it
 from another.
+
+## Virtual Environments
+
+A Python virtual environment is an isolated directory that contains a specific
+Python interpreter and its own independent set of Python packages. This prevents
+conflicts between different projects that may require different versions of the
+same library, keeping the system-wide Python installation clean.
+
+Many facilities will use package managers like `Rez` or `UV` rather than a virtual
+environment, but for learning and solo projects, they are convenient and effective.
+
+To create a virtual environment open the terminal in the root fo your python
+project and type the following command:
+
+`python -m venv <name_of_venv>`
+
+This will create a virtual environment (venv) in the root fo your project.
+The newly created venv will contain a symbolic link to your installed copy of
+python, as well as a library directory for all of your dependencies.
+
+Next, to tell your machine to use the venv, type the following command:
+
+`venv/Scripts/active`
+
+Or navigate to `your_project/venv/Scripts` and run `activate.bat` in your
+terminal.
+
+Now, whenever you install a dependency via `pip`, it will be installed here.
+
+## PyPi
+
+[PyPi](https://pypi.org/) is the Python Package Index, a python foundation
+supported repository of released python packages by developers. Here you can
+find all sorts of released pacakges. Many, if not most, of these packages can
+also be found on [GitHub](http://github.com/).
+
+### The pip command
+
+To install a package from PyPi you can use the `pip` command.
+With your venv activated, lets run `pip install PySide6`.
+This will install `PySide6` and `Shiboken6` into your virtual environment.
+`PySide` is an application framework library for created python applications.
