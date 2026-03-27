@@ -51,7 +51,7 @@ This only exposes the imported items into your file. Other items in the math
 module are not imported in this example.
 ```python
 from math import sqrt, pi
-print(ceil(4.2))  # Produces and error
+print(ceil(4.2))  # Produces an error
 ```
 
 ### Import Everything - Imports all functions from a module:
