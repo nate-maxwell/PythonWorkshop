@@ -97,58 +97,60 @@ Files that exist in the same folder can be imported as-is. Files located in
 another directory require that the folder be added to the `PYTHONPATH` environment
 variable. We will expand more on this later.
 
-# \_\_main__
+## The \_\_name__ Variable and \_\_main__
 
-Consider the following code:
+When you run a Python file directly, Python sets a special variable called `__name__` 
+to the value `"__main__"`. When a file is imported as a module, `__name__` is set 
+to the module's filename instead.
 
-```python
-# math_utils.py
+Try this experiment:
 
-def example_pow(x: int, y: int) -> int:
-    return x ** y
-
-
-foo = example_pow(3, 4)
-```
-
-When importing a library, all top level code (code not bound to a function or
-class) will execute.
-
-This can be helpful when setting up values that are dependent on the platform
-executing the code, or other functionality a library is dependent on that cannot
-be determined beforehand.
-
-However, sometimes you want code to run while working on your library but you
-do not want the code to run when it is imported into another. A very common
-idiom to get around this is as follows:
-
-```python
-# math_utils.py
-
-def example_pow(x: int, y: int) -> int:
-    return x ** y
-
-
-if __name__ == '__main__':
-    foo = example_pow(3, 4)
-```
-
-Lets break this down.
-
-first, lets print
+**File: math_utils.py**
 ```python
 print(__name__)
+
+def example_pow(x: int, y: int) -> int:
+    return x ** y
 ```
 
-`__name__` will print the value of `"__main__"`.
-However, if we import our library into another, it will print the name of the
-file it was declared in.
-Give this a try, printing it in the file you execute vs printing it in a file
-you import to see the results.
+When you run `python math_utils.py`, it prints: `__main__`
 
-By checking if `__name__` evaluates to `"__main__"` we can limit code to only
-run if we are executing the exact file it is located in, and not importing it
-from another.
+But if you import it:
+```python
+# another_file.py
+import math_utils  # Prints: math_utils
+```
+
+### Why This Matters
+
+When importing a module, all top-level code (code not inside functions or classes) 
+executes immediately:
+```python
+# math_utils.py
+def example_pow(x: int, y: int) -> int:
+    return x ** y
+
+foo = example_pow(3, 4)  # This runs when the file is imported!
+```
+
+Sometimes you want code to run only when executing the file directly, not when 
+importing it. Use the `if __name__ == '__main__':` pattern:
+```python
+# math_utils.py
+def example_pow(x: int, y: int) -> int:
+    return x ** y
+
+if __name__ == '__main__':
+    # This only runs when executing this file directly
+    foo = example_pow(3, 4)
+    print(foo)
+```
+
+This is helpful for:
+- Testing your module's functions while developing
+- Providing example usage
+- Running a module as a script or importing it as a library
+
 
 ## Virtual Environments
 
@@ -171,7 +173,15 @@ python, as well as a library directory for all of your dependencies.
 
 Next, to tell your machine to use the venv, type the following command:
 
-`venv/Scripts/active`
+**On Windows:**
+```
+venv\Scripts\activate
+```
+
+**On macOS/Linux:**
+```
+source venv/bin/activate
+```
 
 Or navigate to `your_project/venv/Scripts` and run `activate.bat` in your
 terminal.
@@ -181,13 +191,13 @@ Now, whenever you install a dependency via `pip`, it will be installed here.
 ## PyPi
 
 [PyPi](https://pypi.org/) is the Python Package Index, a python foundation
-supported repository of released python packages by developers. Here you can
-find all sorts of released pacakges. Many, if not most, of these packages can
-also be found on [GitHub](http://github.com/).
+supported repository of released Python packages by developers. Here you can
+find all sorts of released packages. Many, if not most, of these packages can
+also be found on [GitHub](https://github.com/).
 
 ### The pip command
 
 To install a package from PyPi you can use the `pip` command.
-With your venv activated, lets run `pip install PySide6`.
+With your venv activated, let's run `pip install PySide6`.
 This will install `PySide6` and `Shiboken6` into your virtual environment.
 `PySide` is an application framework library for created python applications.
