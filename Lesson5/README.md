@@ -1,4 +1,4 @@
-# Lesson 4 - Dictionaries, Paths, and JSON
+# Lesson 5 - Dictionaries, Paths, and JSON
 
 ## Dictionaries
 

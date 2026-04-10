@@ -8,3 +8,4 @@ Each lesson is meant to be demonstrated by an instructor within 1 hour or less.
 ### [Lesson 2 - Lists, For loops, and Functions](https://github.com/nate-maxwell/PythonWorkshop/tree/main/Lesson2)
 ### [Lesson 3 - classes](https://github.com/nate-maxwell/PythonWorkshop/tree/main/Lesson3)
 ### [Lesson 4 - Modules](https://github.com/nate-maxwell/PythonWorkshop/tree/main/Lesson4) 
+### [Lesson 5 - Dictionaries, JSON, and Pathlib](https://github.com/nate-maxwell/PythonWorkshop/tree/main/Lesson5) 
